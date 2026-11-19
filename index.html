@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Costco – $250 Gift Card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--red:#e31837;--blue:#005daa;--bg:#ebe9e6;}
+html{-webkit-text-size-adjust:100%;}
+body{font-family:'Roboto',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:var(--bg);color:#1b1b1b;min-height:100vh;padding:18px 14px 30px;}
+.col{max-width:440px;margin:0 auto;}
+
+.online{display:flex;align-items:center;gap:10px;width:fit-content;margin:0 auto 18px;background:#fff;border-radius:50px;padding:9px 24px;font-size:16px;font-weight:500;color:#222;box-shadow:0 2px 8px rgba(0,0,0,.04);}
+.dot{width:11px;height:11px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.2);}
+
+.card{background:#fff;border-radius:34px;padding:22px 20px 20px;margin-bottom:14px;box-shadow:0 6px 22px rgba(0,0,0,.05);}
+
+.brand{text-align:center;}
+.brand .name{font-size:44px;font-weight:900;letter-spacing:5px;color:var(--red);line-height:1;padding-left:5px;}
+.brand .sub{font-size:14px;font-weight:700;letter-spacing:6.5px;color:var(--blue);margin-top:9px;padding-left:6px;}
+.lead{text-align:center;font-size:17px;color:#2b2b2b;margin-top:16px;line-height:1.45;}
+.lead b{display:block;font-size:18px;font-weight:700;color:#111;margin-top:4px;}
+hr{border:none;border-top:1px solid #e5e5e5;margin:16px 0 16px;}
+
+.steps{border:2.5px solid var(--blue);border-radius:22px;overflow:hidden;margin-bottom:18px;}
+.steps-head{background:var(--blue);color:#fff;font-size:18px;font-weight:700;padding:13px 18px;}
+.row{display:flex;gap:22px;padding:12px 16px;border-top:1px solid #ececec;font-size:16.5px;line-height:1.35;color:#1c1c1c;}
+.row:first-of-type{border-top:none;}
+.row b{color:var(--red);font-weight:700;min-width:22px;}
+
+.start{display:block;text-align:center;text-decoration:none;color:#fff;background:var(--red);border-radius:50px;padding:17px;font-size:17px;font-weight:700;letter-spacing:3px;text-transform:uppercase;box-shadow:0 10px 22px rgba(227,24,55,.28);position:relative;overflow:hidden;-webkit-tap-highlight-color:transparent;}
+.start::after{content:"";position:absolute;top:0;left:-100%;width:55%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);animation:sweep 2.6s ease-in-out infinite;}
+@keyframes sweep{0%{left:-100%}60%,100%{left:130%}}
+.start:active{transform:scale(.985);}
+
+/* Trustpilot */
+.tp{text-align:center;padding:30px 20px 30px;}
+.stars{display:flex;justify-content:center;gap:5px;margin-bottom:18px;}
+.star{width:38px;height:38px;border-radius:5px;background:#00b67a;display:flex;align-items:center;justify-content:center;}
+.star.part{background:linear-gradient(90deg,#00b67a 78%,#cfcfcf 78%);}
+.star svg,.tp-logo svg{width:23px;height:23px;fill:#fff;}
+.score{font-size:35px;font-weight:700;margin-bottom:4px;}
+.based{font-size:18px;color:#6e6e6e;margin-bottom:16px;}
+.tp-logo{display:inline-flex;align-items:center;gap:9px;font-size:23px;font-weight:700;color:#191919;}
+.tp-logo span{width:30px;height:30px;border-radius:5px;background:#00b67a;display:flex;align-items:center;justify-content:center;}
+
+/* FAQ */
+.faq{padding:0;overflow:hidden;}
+.faq-title{padding:22px 22px 16px;font-size:13px;font-weight:700;letter-spacing:2.2px;color:#8b8b8b;text-transform:uppercase;}
+.item{border-top:1px solid #ececec;}
+.q{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:22px 22px;font-size:18px;font-weight:700;color:#141414;cursor:pointer;user-select:none;}
+.plus{position:relative;width:20px;height:20px;flex-shrink:0;}
+.plus::before,.plus::after{content:"";position:absolute;background:#7a7a7a;border-radius:2px;transition:transform .25s;}
+.plus::before{left:0;right:0;top:9px;height:2px;}
+.plus::after{top:0;bottom:0;left:9px;width:2px;}
+.item.open .plus::after{transform:scaleY(0);}
+.a{max-height:0;overflow:hidden;padding:0 24px;font-size:16.5px;line-height:1.65;color:#666;transition:max-height .3s ease,padding .3s ease;}
+.item.open .a{max-height:200px;padding:0 24px 22px;}
+
+.copy{text-align:center;font-size:15.5px;color:#b4b1ac;margin-top:18px;}
+</style>
+</head>
+<body>
+<div class="col">
+
+  <div class="online"><span class="dot"></span><span><span id="online">876</span> online now</span></div>
+
+  <div class="card">
+    <div class="brand">
+      <div class="name">COSTCO</div>
+      <div class="sub">WHOLESALE</div>
+    </div>
+    <p class="lead">Complete the steps below to claim your <b>$250 Costco Gift Card</b></p>
+    <hr>
+    <div class="steps">
+      <div class="steps-head">Steps to Qualify</div>
+      <div class="row"><b>1.</b><span>Click on “Start Now”</span></div>
+      <div class="row"><b>2.</b><span>Enter your email and basic information</span></div>
+      <div class="row"><b>3.</b><span>Complete 3–5 recommended deals (required)</span></div>
+      <div class="row"><b>4.</b><span>Claim your $250 Costco Gift Card</span></div>
+    </div>
+    <a class="start" href="https://giftclick.org/?offer_id=4572&aff_id=186988" target="_blank" rel="noopener">Start Now</a>
+  </div>
+
+  <div class="card tp">
+    <div class="stars">
+      <div class="star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7.1L12 17.6 5.7 21.3l1.7-7.1L2 9.5l7.1-.6z"/></svg></div>
+      <div class="star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7.1L12 17.6 5.7 21.3l1.7-7.1L2 9.5l7.1-.6z"/></svg></div>
+      <div class="star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7.1L12 17.6 5.7 21.3l1.7-7.1L2 9.5l7.1-.6z"/></svg></div>
+      <div class="star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7.1L12 17.6 5.7 21.3l1.7-7.1L2 9.5l7.1-.6z"/></svg></div>
+      <div class="star part"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7.1L12 17.6 5.7 21.3l1.7-7.1L2 9.5l7.1-.6z"/></svg></div>
+    </div>
+    <div class="score">9.8 out of 10</div>
+    <div class="based">Based on 9,233 reviews</div>
+    <div class="tp-logo"><span><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7.1L12 17.6 5.7 21.3l1.7-7.1L2 9.5l7.1-.6z"/></svg></span>Trustpilot</div>
+  </div>
+
+  <div class="card faq">
+    <div class="faq-title">Frequently Asked Questions</div>
+    <div class="item">
+      <div class="q" onclick="this.parentElement.classList.toggle('open')"><span>What are Deals?</span><span class="plus"></span></div>
+      <div class="a">Deals are sponsored offers from our partners, such as free trials, surveys, app downloads or quick sign-ups. You choose which ones to complete.</div>
+    </div>
+    <div class="item">
+      <div class="q" onclick="this.parentElement.classList.toggle('open')"><span>How many Deals do I need to complete?</span><span class="plus"></span></div>
+      <div class="a">You need to complete 3–5 recommended deals to qualify for your $250 Costco Gift Card.</div>
+    </div>
+    <div class="item">
+      <div class="q" onclick="this.parentElement.classList.toggle('open')"><span>When will I receive my reward?</span><span class="plus"></span></div>
+      <div class="a">Your gift card is delivered digitally within 24–48 hours after all required deals are completed and verified.</div>
+    </div>
+  </div>
+
+  <div class="copy">Copyright 2026. All rights reserved.</div>
+</div>
+
+<script>
+let n = 876;
+setInterval(function(){
+  n += Math.floor(Math.random()*7) - 3;
+  if(n < 800) n = 800; if(n > 940) n = 940;
+  document.getElementById('online').textContent = n.toLocaleString();
+}, 4000);
+</script>
+</body>
+</html>
